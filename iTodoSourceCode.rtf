@@ -1,0 +1,274 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 import SwiftUI\
+import Foundation\
+\
+struct ContentView: View \{\
+    @State private var stringExpense: String = ""\
+    @State private var savedTexts: [String] = []\
+    @State private var completedTexts: [String] = []\
+    @State private var hoveredIndex: Int? = nil\
+    @State private var completedHoveredIndex: Int? = nil\
+    @State private var isHovered = false\
+    @State private var deletedItem: String? = nil\
+    @State private var changedTerm: String = ""\
+    @State private var isEditing: Bool = false\
+    @State private var editingIndex: Int?\
+    @State private var defaultTask1: String = "Task 1"\
+    @State private var defaultTask2: String = "Task 2"\
+    @State private var defaultTask3: String = "Task 3"\
+    \
+    var body: some View \{\
+        \
+        ScrollView \{\
+            \
+            VStack \{\
+                Image(systemName: "checkmark.seal")\
+                    .imageScale(.large)\
+                    .foregroundStyle(.tint)\
+                    .padding()\
+                    .font(.title)\
+                \
+                HStack \{\
+                    Text("iTodo")\
+                        .bold()\
+                        .padding()\
+                        .font(.title)\
+                    Image(systemName: "info.circle")\
+                        .contextMenu \{\
+                            Text("iTodo v1, 2024")\
+                            Text("Keyboard Shortcuts:")\
+                                .foregroundColor(.green)\
+                            Text("1. Command + D - New Day, erase all tasks")\
+                            Text("2. Command + Enter - Complete all pending tasks")\
+                            Text("3. Command + Delete - Clear all completed tasks")\
+                            Text("4, 5, 6. Command + 1, 2, 3 - Populate to-do tasks with prewritten essentials")\
+                        \}\
+                    \}\
+                Button(action: \{\
+                    newDay()\
+                \}, label: \{\
+                    Text("New Day")\
+                    Image(systemName: "sun.max")\
+                        .foregroundColor(.yellow)\
+                    Image(systemName: "command")\
+                    Text("D")\
+                \})\
+                .keyboardShortcut("d", modifiers: .command)\
+                HStack \{\
+                    Button(action: \{\
+                        addTask(defaultTask1)\
+                    \}) \{\
+                        Text(defaultTask1)\
+                        Image(systemName: "command")\
+                        Text("1")\
+                    \}\
+                    .keyboardShortcut("1", modifiers: .command)\
+                    Button(action: \{\
+                        addTask(defaultTask2)\
+                    \}) \{\
+                        Text(defaultTask2)\
+                        Image(systemName: "command")\
+                        Text("2")\
+                    \}\
+                    .keyboardShortcut("2", modifiers: .command)\
+                    Button(action: \{\
+                        addTask(defaultTask3)\
+                    \}) \{\
+                        Text(defaultTask3)\
+                        Image(systemName: "command")\
+                        Text("3")\
+                    \}\
+                    .keyboardShortcut("3", modifiers: .command)\
+                \}\
+                TextField("Enter Your Task", text: $stringExpense, onCommit: \{\
+                    saveExpense()\
+                \})\
+                .padding()\
+                                \
+                VStack \{\
+                    HStack \{\
+                        Text("To-do List:")\
+                            .font(.title2)\
+                        Button(action: \{\
+                            removeAllExpense()\
+                        \}, label: \{\
+                            Text("Mark All as Complete")\
+                            Image(systemName: "command")\
+                            Image(systemName: "return")\
+                        \})\
+                        .padding()\
+                        .keyboardShortcut(.return, modifiers: .command)\
+                    \}\
+                    ForEach(savedTexts.indices, id: \\.self) \{ index in\
+                        HStack \{\
+                            if index == editingIndex && isEditing \{\
+                                TextField("Edit", text: $changedTerm, onCommit: \{\
+                                    saveChanges()\
+                                \})\
+                                .padding()\
+                                .background(hoveredIndex == index ? Color.blue.opacity(0.2) : Color.clear)\
+                                .onHover \{ hovering in\
+                                    hoveredIndex = hovering ? index : nil\
+                                \}\
+                            \} else \{\
+                                let pinned = index == 0\
+                                Button(action: \{\
+                                    removeExpense(at: index, from: &savedTexts)\
+                                \}) \{\
+                                    HStack \{\
+                                        if pinned \{\
+                                            Image(systemName: "pin.fill")\
+                                        \}\
+                                        Text(savedTexts[index])\
+                                            .padding()\
+                                            .background(hoveredIndex == index ? Color.blue.opacity(0.2) : Color.clear)\
+                                    \}\
+                                \}\
+                                .contextMenu \{\
+                                    Button("Pin to Top") \{\
+                                        pinItemToTop(index)\
+                                    \}\
+                                    Button("Edit") \{\
+                                        beginEditing(at: index)\
+                                    \}\
+                                    Button("Complete") \{\
+                                        removeExpense(at: index, from: &savedTexts)\
+                                    \}\
+                                \}\
+                                .buttonStyle(PlainButtonStyle())\
+                            \}\
+                        \}\
+                    \}\
+                    HStack \{\
+                        Text("Completed Tasks:")\
+                            .font(.title2)\
+                        Button(action: \{\
+                            removeAllComplete()\
+                        \}, label: \{\
+                            Text("Delete All")\
+                            Image(systemName: "command")\
+                            Image(systemName: "delete.left.fill")\
+                        \})\
+                        .padding()\
+                        .keyboardShortcut(.delete, modifiers: .command)\
+                    \}\
+                    \
+                    ForEach(completedTexts.indices, id: \\.self) \{ index in\
+                        HStack \{\
+                            Text(completedTexts[index])\
+                                .padding()\
+                                .background(completedHoveredIndex == index ? Color.blue.opacity(0.2) : Color.clear)\
+                                .onHover \{ hovering in\
+                                    completedHoveredIndex = hovering ? index : nil\
+                                    isHovered = true\
+                                \}\
+                                .onTapGesture \{\
+                                    removeExpense(at: index, from: &completedTexts)\
+                                \}\
+                            if completedHoveredIndex == index \{\
+                                Button(action: \{\
+                                    removeExpense(at: index, from: &completedTexts)\
+                                \}) \{\
+                                    Image(systemName: "trash")\
+                                        .foregroundColor(.red)\
+                                \}\
+                                .buttonStyle(BorderlessButtonStyle())\
+                            \}\
+                        \}\
+                    \}\
+                \}\
+                VStack \{\
+                    Text("Default Tasks:")\
+                        .padding()\
+                        .font(.title2)\
+                    HStack \{\
+                        TextField("Task 1", text: $defaultTask1)\
+                            .padding()\
+                            .keyboardShortcut("1", modifiers: [.command, .shift])\
+                        TextField("Task 2", text: $defaultTask2)\
+                            .keyboardShortcut("2", modifiers: [.command, .shift])\
+                            .padding()\
+                        TextField("Task 3", text: $defaultTask3)\
+                            .padding()\
+                            .keyboardShortcut("3", modifiers: [.command, .shift])\
+                    \}\
+                \}\
+            \}\
+            .onAppear \{\
+                printLists()\
+            \}\
+        \}\
+    \}\
+    \
+    private func saveExpense() \{\
+        guard !stringExpense.isEmpty else \{ return \}\
+        savedTexts.append(stringExpense)\
+        stringExpense = ""\
+    \}\
+    \
+    private func removeExpense(at index: Int, from array: inout [String]) \{\
+        guard array.indices.contains(index) else \{ return \}\
+        deletedItem = array[index] // Record the deleted item\
+        array.remove(at: index)\
+        completedTexts.append(deletedItem!) // Append deleted item to completed tasks\
+        hoveredIndex = nil\
+    \}\
+    \
+    private func removeAllExpense() \{\
+        completedTexts.append(contentsOf: savedTexts)\
+        savedTexts.removeAll()\
+    \}\
+    \
+    private func removeAllComplete() \{\
+        completedTexts.removeAll()\
+    \}\
+    \
+    private func newDay() \{\
+        savedTexts.removeAll()\
+        completedTexts.removeAll()\
+    \}\
+    \
+    private func printLists() \{\
+        print("To-do List: \\(savedTexts)")\
+        print("Completed Tasks: \\(completedTexts)")\
+    \}\
+    \
+    private func beginEditing(at index: Int) \{\
+        isEditing = true\
+        editingIndex = index\
+        changedTerm = savedTexts[index]\
+    \}\
+    \
+    private func saveChanges() \{\
+        if let index = editingIndex \{\
+            savedTexts[index] = changedTerm\
+            isEditing = false\
+            editingIndex = nil\
+        \}\
+    \}\
+    \
+    private func pinItemToTop(_ index: Int) \{\
+        if index != 0 && index < savedTexts.count \{\
+            let itemToPin = savedTexts.remove(at: index)\
+            savedTexts.insert(itemToPin, at: 0)\
+        \}\
+    \}\
+    \
+    private func addTask(_ task: String) \{\
+        savedTexts.append(task)\
+    \}\
+\}\
+\
+struct ContentView_Previews: PreviewProvider \{\
+    static var previews: some View \{\
+        ContentView()\
+    \}\
+\}\
+\
+}
