@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18596FBC2BC1925B0031C0D5 /* themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18596FBB2BC1925B0031C0D5 /* themes.swift */; };
+		185DB6EA2BBD556700AEC12D /* automaticNewDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB6E92BBD556700AEC12D /* automaticNewDay.swift */; };
+		185DB6EC2BBDF0B200AEC12D /* timeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB6EB2BBDF0B200AEC12D /* timeTable.swift */; };
+		185DB6EE2BBEDCC800AEC12D /* preferenceWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB6ED2BBEDCC800AEC12D /* preferenceWindow.swift */; };
+		185DB6F02BBEF4B300AEC12D /* preferencesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB6EF2BBEF4B300AEC12D /* preferencesViewModel.swift */; };
+		185DB6F22BBEFA4500AEC12D /* sceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB6F12BBEFA4500AEC12D /* sceneDelegate.swift */; };
+		185DB6F42BBFE16100AEC12D /* encryptedTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB6F32BBFE16100AEC12D /* encryptedTasks.swift */; };
+		185DB6F62BC0073000AEC12D /* password.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185DB6F52BC0073000AEC12D /* password.swift */; };
+		18721D282BB9647A00F0293A /* timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18721D272BB9647A00F0293A /* timer.swift */; };
+		187232912BBB5353007C05A7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187232902BBB5353007C05A7 /* WidgetKit.framework */; };
+		187232932BBB5353007C05A7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187232922BBB5353007C05A7 /* SwiftUI.framework */; };
+		187232962BBB5353007C05A7 /* iTodoWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187232952BBB5353007C05A7 /* iTodoWidgetBundle.swift */; };
+		187232982BBB5353007C05A7 /* iTodoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187232972BBB5353007C05A7 /* iTodoWidget.swift */; };
+		1872329A2BBB5353007C05A7 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187232992BBB5353007C05A7 /* AppIntent.swift */; };
+		1872329C2BBB5354007C05A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1872329B2BBB5354007C05A7 /* Assets.xcassets */; };
+		187232A12BBB5354007C05A7 /* iTodoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1872328E2BBB5353007C05A7 /* iTodoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		187232A72BBC524D007C05A7 /* timerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187232A62BBC524D007C05A7 /* timerView.swift */; };
+		187232A92BBC676C007C05A7 /* microwave-timer-117077.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 187232A82BBC676C007C05A7 /* microwave-timer-117077.mp3 */; };
+		189544032BB8669200CF51AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189904512BB6C1B60052915E /* Assets.xcassets */; };
+		1899044E2BB6C1B60052915E /* iTodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899044D2BB6C1B60052915E /* iTodoApp.swift */; };
+		189904502BB6C1B60052915E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1899044F2BB6C1B60052915E /* ContentView.swift */; };
+		189904552BB6C1B60052915E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189904542BB6C1B60052915E /* Preview Assets.xcassets */; };
+		18DB20F82BB6DB160075B38E /* keyboardShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB20F72BB6DB160075B38E /* keyboardShortcuts.swift */; };
+		18DB20FA2BB761410075B38E /* infoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB20F92BB761410075B38E /* infoPage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1872329F2BBB5354007C05A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 189904422BB6C1B60052915E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1872328D2BBB5353007C05A7;
+			remoteInfo = iTodoWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		187232A22BBB5354007C05A7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				187232A12BBB5354007C05A7 /* iTodoWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18596FBB2BC1925B0031C0D5 /* themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = themes.swift; sourceTree = "<group>"; };
+		185DB6E92BBD556700AEC12D /* automaticNewDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = automaticNewDay.swift; sourceTree = "<group>"; };
+		185DB6EB2BBDF0B200AEC12D /* timeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeTable.swift; sourceTree = "<group>"; };
+		185DB6ED2BBEDCC800AEC12D /* preferenceWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferenceWindow.swift; sourceTree = "<group>"; };
+		185DB6EF2BBEF4B300AEC12D /* preferencesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferencesViewModel.swift; sourceTree = "<group>"; };
+		185DB6F12BBEFA4500AEC12D /* sceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sceneDelegate.swift; sourceTree = "<group>"; };
+		185DB6F32BBFE16100AEC12D /* encryptedTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = encryptedTasks.swift; sourceTree = "<group>"; };
+		185DB6F52BC0073000AEC12D /* password.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = password.swift; sourceTree = "<group>"; };
+		18721D272BB9647A00F0293A /* timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timer.swift; sourceTree = "<group>"; };
+		1872328E2BBB5353007C05A7 /* iTodoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iTodoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		187232902BBB5353007C05A7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		187232922BBB5353007C05A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		187232952BBB5353007C05A7 /* iTodoWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTodoWidgetBundle.swift; sourceTree = "<group>"; };
+		187232972BBB5353007C05A7 /* iTodoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTodoWidget.swift; sourceTree = "<group>"; };
+		187232992BBB5353007C05A7 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		1872329B2BBB5354007C05A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1872329D2BBB5354007C05A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1872329E2BBB5354007C05A7 /* iTodoWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iTodoWidget.entitlements; sourceTree = "<group>"; };
+		187232A62BBC524D007C05A7 /* timerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerView.swift; sourceTree = "<group>"; };
+		187232A82BBC676C007C05A7 /* microwave-timer-117077.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "microwave-timer-117077.mp3"; path = "../../../Downloads/microwave-timer-117077.mp3"; sourceTree = "<group>"; };
+		1899044A2BB6C1B60052915E /* iTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1899044D2BB6C1B60052915E /* iTodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTodoApp.swift; sourceTree = "<group>"; };
+		1899044F2BB6C1B60052915E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		189904512BB6C1B60052915E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		189904542BB6C1B60052915E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		189904562BB6C1B60052915E /* iTodo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iTodo.entitlements; sourceTree = "<group>"; };
+		18DB20F72BB6DB160075B38E /* keyboardShortcuts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyboardShortcuts.swift; sourceTree = "<group>"; };
+		18DB20F92BB761410075B38E /* infoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoPage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1872328B2BBB5353007C05A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187232932BBB5353007C05A7 /* SwiftUI.framework in Frameworks */,
+				187232912BBB5353007C05A7 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189904472BB6C1B60052915E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1872328F2BBB5353007C05A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				187232902BBB5353007C05A7 /* WidgetKit.framework */,
+				187232922BBB5353007C05A7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		187232942BBB5353007C05A7 /* iTodoWidget */ = {
+			isa = PBXGroup;
+			children = (
+				187232972BBB5353007C05A7 /* iTodoWidget.swift */,
+				187232952BBB5353007C05A7 /* iTodoWidgetBundle.swift */,
+				187232992BBB5353007C05A7 /* AppIntent.swift */,
+				1872329B2BBB5354007C05A7 /* Assets.xcassets */,
+				1872329D2BBB5354007C05A7 /* Info.plist */,
+				1872329E2BBB5354007C05A7 /* iTodoWidget.entitlements */,
+			);
+			path = iTodoWidget;
+			sourceTree = "<group>";
+		};
+		189904412BB6C1B60052915E = {
+			isa = PBXGroup;
+			children = (
+				18596FBB2BC1925B0031C0D5 /* themes.swift */,
+				185DB6F52BC0073000AEC12D /* password.swift */,
+				185DB6F32BBFE16100AEC12D /* encryptedTasks.swift */,
+				185DB6F12BBEFA4500AEC12D /* sceneDelegate.swift */,
+				185DB6EF2BBEF4B300AEC12D /* preferencesViewModel.swift */,
+				185DB6ED2BBEDCC800AEC12D /* preferenceWindow.swift */,
+				185DB6EB2BBDF0B200AEC12D /* timeTable.swift */,
+				185DB6E92BBD556700AEC12D /* automaticNewDay.swift */,
+				187232A62BBC524D007C05A7 /* timerView.swift */,
+				187232A82BBC676C007C05A7 /* microwave-timer-117077.mp3 */,
+				18721D272BB9647A00F0293A /* timer.swift */,
+				18DB20F92BB761410075B38E /* infoPage.swift */,
+				18DB20F72BB6DB160075B38E /* keyboardShortcuts.swift */,
+				1899044C2BB6C1B60052915E /* iTodo */,
+				187232942BBB5353007C05A7 /* iTodoWidget */,
+				1872328F2BBB5353007C05A7 /* Frameworks */,
+				1899044B2BB6C1B60052915E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1899044B2BB6C1B60052915E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1899044A2BB6C1B60052915E /* iTodo.app */,
+				1872328E2BBB5353007C05A7 /* iTodoWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1899044C2BB6C1B60052915E /* iTodo */ = {
+			isa = PBXGroup;
+			children = (
+				1899044D2BB6C1B60052915E /* iTodoApp.swift */,
+				1899044F2BB6C1B60052915E /* ContentView.swift */,
+				189904512BB6C1B60052915E /* Assets.xcassets */,
+				189904562BB6C1B60052915E /* iTodo.entitlements */,
+				189904532BB6C1B60052915E /* Preview Content */,
+			);
+			path = iTodo;
+			sourceTree = "<group>";
+		};
+		189904532BB6C1B60052915E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				189904542BB6C1B60052915E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1872328D2BBB5353007C05A7 /* iTodoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187232A52BBB5354007C05A7 /* Build configuration list for PBXNativeTarget "iTodoWidgetExtension" */;
+			buildPhases = (
+				1872328A2BBB5353007C05A7 /* Sources */,
+				1872328B2BBB5353007C05A7 /* Frameworks */,
+				1872328C2BBB5353007C05A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iTodoWidgetExtension;
+			productName = iTodoWidgetExtension;
+			productReference = 1872328E2BBB5353007C05A7 /* iTodoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		189904492BB6C1B60052915E /* iTodo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189904592BB6C1B60052915E /* Build configuration list for PBXNativeTarget "iTodo" */;
+			buildPhases = (
+				189904462BB6C1B60052915E /* Sources */,
+				189904472BB6C1B60052915E /* Frameworks */,
+				189904482BB6C1B60052915E /* Resources */,
+				187232A22BBB5354007C05A7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				187232A02BBB5354007C05A7 /* PBXTargetDependency */,
+			);
+			name = iTodo;
+			productName = iTodo;
+			productReference = 1899044A2BB6C1B60052915E /* iTodo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		189904422BB6C1B60052915E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					1872328D2BBB5353007C05A7 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					189904492BB6C1B60052915E = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = 189904452BB6C1B60052915E /* Build configuration list for PBXProject "iTodo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 189904412BB6C1B60052915E;
+			productRefGroup = 1899044B2BB6C1B60052915E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				189904492BB6C1B60052915E /* iTodo */,
+				1872328D2BBB5353007C05A7 /* iTodoWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1872328C2BBB5353007C05A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1872329C2BBB5354007C05A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189904482BB6C1B60052915E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189544032BB8669200CF51AD /* Assets.xcassets in Resources */,
+				189904552BB6C1B60052915E /* Preview Assets.xcassets in Resources */,
+				187232A92BBC676C007C05A7 /* microwave-timer-117077.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1872328A2BBB5353007C05A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187232962BBB5353007C05A7 /* iTodoWidgetBundle.swift in Sources */,
+				187232982BBB5353007C05A7 /* iTodoWidget.swift in Sources */,
+				1872329A2BBB5353007C05A7 /* AppIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		189904462BB6C1B60052915E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DB20F82BB6DB160075B38E /* keyboardShortcuts.swift in Sources */,
+				18596FBC2BC1925B0031C0D5 /* themes.swift in Sources */,
+				185DB6F02BBEF4B300AEC12D /* preferencesViewModel.swift in Sources */,
+				185DB6F22BBEFA4500AEC12D /* sceneDelegate.swift in Sources */,
+				185DB6F42BBFE16100AEC12D /* encryptedTasks.swift in Sources */,
+				185DB6F62BC0073000AEC12D /* password.swift in Sources */,
+				185DB6EC2BBDF0B200AEC12D /* timeTable.swift in Sources */,
+				189904502BB6C1B60052915E /* ContentView.swift in Sources */,
+				18721D282BB9647A00F0293A /* timer.swift in Sources */,
+				18DB20FA2BB761410075B38E /* infoPage.swift in Sources */,
+				187232A72BBC524D007C05A7 /* timerView.swift in Sources */,
+				1899044E2BB6C1B60052915E /* iTodoApp.swift in Sources */,
+				185DB6EA2BBD556700AEC12D /* automaticNewDay.swift in Sources */,
+				185DB6EE2BBEDCC800AEC12D /* preferenceWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		187232A02BBB5354007C05A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1872328D2BBB5353007C05A7 /* iTodoWidgetExtension */;
+			targetProxy = 1872329F2BBB5354007C05A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		187232A32BBB5354007C05A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = iTodoWidget/iTodoWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iTodoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iTodoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihaalg.iTodo.iTodoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		187232A42BBB5354007C05A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = iTodoWidget/iTodoWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iTodoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iTodoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihaalg.iTodo.iTodoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		189904572BB6C1B60052915E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		189904582BB6C1B60052915E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		1899045A2BB6C1B60052915E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = iTodo/iTodo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iTodo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihaalg.iTodo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1899045B2BB6C1B60052915E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = iTodo/iTodo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iTodo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nihaalg.iTodo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		187232A52BBB5354007C05A7 /* Build configuration list for PBXNativeTarget "iTodoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187232A32BBB5354007C05A7 /* Debug */,
+				187232A42BBB5354007C05A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189904452BB6C1B60052915E /* Build configuration list for PBXProject "iTodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189904572BB6C1B60052915E /* Debug */,
+				189904582BB6C1B60052915E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189904592BB6C1B60052915E /* Build configuration list for PBXNativeTarget "iTodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1899045A2BB6C1B60052915E /* Debug */,
+				1899045B2BB6C1B60052915E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 189904422BB6C1B60052915E /* Project object */;
+}
